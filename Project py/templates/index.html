@@ -1,0 +1,102 @@
+<html>
+  <head>
+    <title>control center</title>
+
+  </head>
+  <body>
+    <h1>Control Center</h1>
+
+    <h3>HOST IP PORT ADDRESS</h3>
+
+    <div class="hostIpPort"></div>
+
+    <h3>Camera</h3>
+
+    <div>
+      <img src="{{ url_for('video_feed') }}" width="50%">
+    </div>
+
+    <h3>DC motor control</h3>
+
+    <div>
+      <button onclick="httpGet(`${thisUrl}dc_motor/0`)">forward</button>
+      <button onclick="httpGet(`${thisUrl}dc_motor/1`)">backward</button>
+      <button onclick="httpGet(`${thisUrl}dc_motor/2`)">left</button>
+      <button onclick="httpGet(`${thisUrl}dc_motor/3`)">right</button>
+      <button onclick="httpGet(`${thisUrl}dc_motor/4`)">CCW</button>
+      <button onclick="httpGet(`${thisUrl}dc_motor/5`)">CW</button>
+      <button onclick="httpGet(`${thisUrl}dc_motor/6`)">STOP</button>
+    </div>
+
+    <h3>DC motor Interval control</h3>
+
+    <div>
+      <button onclick="httpGet(`${thisUrl}dc_motor_interval/0`)">forward</button>
+      <button onclick="httpGet(`${thisUrl}dc_motor_interval/1`)">backward</button>
+      <button onclick="httpGet(`${thisUrl}dc_motor_interval/2`)">left</button>
+      <button onclick="httpGet(`${thisUrl}dc_motor_interval/3`)">right</button>
+      <button onclick="httpGet(`${thisUrl}dc_motor_interval/4`)">CCW</button>
+      <button onclick="httpGet(`${thisUrl}dc_motor_interval/5`)">CW</button>
+    </div>
+
+    <h3>SERVO motor control</h3>
+
+    <div>
+      <button onclick="httpGet(`${thisUrl}servo_motor_on`)">SERVO ON</button>
+      <button onclick="httpGet(`${thisUrl}servo_motor_off`)">SERVO OFF</button>
+    </div>
+
+    <h3>LED control</h3>
+
+    <div>
+      <button onclick="httpGet(`${thisUrl}led_on/0`)">LED ON 1</button>
+      <button onclick="httpGet(`${thisUrl}led_on/1`)">LED ON 2</button>
+      <button onclick="httpGet(`${thisUrl}led_on/2`)">LED ON 3</button>
+      <button onclick="httpGet(`${thisUrl}led_on/3`)">LED ON 4</button>
+      <button onclick="httpGet(`${thisUrl}led_on/4`)">LED ON 5</button>
+      <button onclick="httpGet(`${thisUrl}led_on/5`)">LED ON 6</button>
+      <button onclick="httpGet(`${thisUrl}led_on/6`)">LED ON 7</button>
+      <button onclick="httpGet(`${thisUrl}led_off`)">LED OFF</button>
+    </div>
+  </body>
+
+  <script>
+    let thisUrl = window.location.href;
+    console.log(thisUrl)
+
+    const hostAddress = document.querySelector(".hostIpPort");
+    hostAddress.innerHTML = thisUrl;
+
+/*
+
+    var ul = document.querySelector(".dc_motor");
+
+    var a = document.createElement("a");
+    a.innerHTML = "forward";
+    a.href = `${thisUrl}dc_motor/1`;
+
+    var li = document.createElement("li");
+    li.appendChild(a);
+    ul.appendChild(li);
+*/
+
+
+    function fetchUrl(direction){
+      fetch(`${thisUrl}dc_motor/${direction}`)
+    }
+
+    
+    
+
+    // use GET (because of delay)
+    function httpGet(url)
+    {
+      var xmlHttp = new XMLHttpRequest();
+      xmlHttp.open( "GET", url); // false for synchronous request
+      xmlHttp.send( null );
+      return xmlHttp.responseText;
+    }
+
+
+  </script>
+</html>
