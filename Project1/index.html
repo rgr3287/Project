@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>for you</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link
+        href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <style>
+        #logo {
+            width: 80px;
+        }
+
+        #mainNav {
+            background-color: burlywood;
+        }
+
+        #search-box {
+            border: 5px solid lightgray;
+            width: 700px;
+            height: 80px;
+            background-image: url(./assets/img/searchicon.png);
+            background-repeat: no-repeat;
+            background-position: 8px center;
+            text-indent: 40px;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .btn1 {
+            width: 100px;
+            height: 80px;
+            margin: 0px;
+            padding: 0px;
+            background-color: goldenrod;
+            color: cornsilk;
+        }
+
+        .container {
+            width: 640px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        ul,
+        li {
+            list-style-type: none;
+        }
+
+        [name="slide"] {
+            display: none;
+        }
+
+        .slidebox {
+            max-width: 800px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .slidebox img {
+            max-width: 100%;
+        }
+
+        .slidebox .slidelist {
+            white-space: nowrap;
+            font-size: 0;
+            overflow: hidden;
+        }
+
+        .slidebox .slideitem {
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            width: 100%;
+            transform: all .35s;
+        }
+
+        .slidebox .slideitem label {
+            position: absolute;
+            z-index: 1;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 20px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .slideitem {
+            overflow: hidden;
+
+        }
+
+        label.left {
+            left: 20px;
+            background-color: #5F5F5F;
+            background-image: url(https://cdn-icons-png.flaticon.com/512/254/254427.png);
+            background-position: center center;
+            background-size: 50%;
+            background-repeat: no-repeat;
+        }
+
+        label.right {
+            right: 20px;
+            background-color: #5F5F5F;
+            background-image: url(https://cdn-icons-png.flaticon.com/512/254/254442.png);
+            background-position: center center;
+            background-size: 50%;
+            background-repeat: no-repeat;
+        }
+
+        [id="slide01"]:checked~.slidelist .slideitem {
+            transform: translateX(-0%);
+            animation: slide01 20s infinite;
+        }
+
+        [id="slide02"]:checked~.slidelist .slideitem {
+            transform: translateX(-100%);
+            animation: slide02 20s infinite;
+        }
+
+        [id="slide03"]:checked~.slidelist .slideitem {
+            transform: translateX(-200%);
+            animation: slide03 20s infinite;
+        }
+
+        [id="slide04"]:checked~.slidelist .slideitem {
+            transform: translateX(-300%);
+            animation: slide04 20s infinite;
+        }
+
+        @keyframes slide01 {
+            0% {
+                left: 0%;
+            }
+
+            23% {
+                left: 0%;
+            }
+
+            25% {
+                left: -100%;
+            }
+
+            48% {
+                left: -100%;
+            }
+
+            50% {
+                left: -200%;
+            }
+
+            73% {
+                left: -200%;
+            }
+
+            75% {
+                left: -300%;
+            }
+
+            98% {
+                left: -300%;
+            }
+
+            100% {
+                left: 0%;
+            }
+        }
+
+        @keyframes slide02 {
+            0% {
+                left: 0%;
+            }
+
+            23% {
+                left: 0%;
+            }
+
+            25% {
+                left: -100%;
+            }
+
+            48% {
+                left: -100%;
+            }
+
+            50% {
+                left: -200%;
+            }
+
+            73% {
+                left: -200%;
+            }
+
+            75% {
+                left: 100%;
+            }
+
+            98% {
+                left: 100%;
+            }
+
+            100% {
+                left: 0%;
+            }
+        }
+
+        @keyframes slide03 {
+            0% {
+                left: 0%;
+            }
+
+            23% {
+                left: 0%;
+            }
+
+            25% {
+                left: -100%;
+            }
+
+            48% {
+                left: -100%;
+            }
+
+            50% {
+                left: 200%;
+            }
+
+            73% {
+                left: 200%;
+            }
+
+            75% {
+                left: 100%;
+            }
+
+            98% {
+                left: 100%;
+            }
+
+            100% {
+                left: 0%;
+            }
+        }
+
+        @keyframes slide04 {
+            0% {
+                left: 0%;
+            }
+
+            23% {
+                left: 0%;
+            }
+
+            25% {
+                left: 300%;
+            }
+
+            48% {
+                left: 300%;
+            }
+
+            50% {
+                left: 200%;
+            }
+
+            73% {
+                left: 200%;
+            }
+
+            75% {
+                left: 100%;
+            }
+
+            98% {
+                left: 100%;
+            }
+
+            100% {
+                left: 0%;
+            }
+        }
+        .mx-md-1 {
+    margin-right: 0.25rem !important;
+    margin-left: 0.25rem !important;
+  }
+  .ps-sm-4 {
+    padding-left: 1.5rem !important;
+  }
+  body{
+    background-image:url(https://source.unsplash.com/collection/190727/1600x900);;
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    justify-content: center; 
+    align-items: center;
+
+
+}
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 class="site-heading text-center text-faded d-none d-lg-block" id="main1">
+            <span class="site-heading-upper text-primary mb-3">오늘의 추억의 장소를 사진과 함깨</span>
+            <span class="site-heading-lower"><img src="/Project1/assets/img/logo.png" id="logo">FOR u</span>
+        </h1>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand text-uppercase fw-bold d-lg-none" href="index.html">Start Bootstrap</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="#">글 쓰기</a></li>
+                    <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="#">글 보러 가기</a></li>
+                    <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="#">나만의 저장소</a></li>
+                    <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="flame.html">고객센터</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="slidebox">
+        <br><br><br><br>
+        <h2> Hot Place!</h2>
+        <input type="radio" name="slide" id="slide01" checked>
+        <input type="radio" name="slide" id="slide02">
+        <input type="radio" name="slide" id="slide03">
+        <input type="radio" name="slide" id="slide04">
+        <ul class="slidelist">
+            <li class="slideitem">
+                <div>
+                    <label for="slide04" class="left"></label>
+                    <label for="slide02" class="right"></label>
+                    <a><img src="/Project1/assets/img/1.jpg"></a>
+                </div>
+            </li>
+            <li class="slideitem">
+                <div>
+                    <label for="slide01" class="left"></label>
+                    <label for="slide03" class="right"></label>
+                    <a><img src="/Project1/assets/img/2.jpg"></a>
+                </div>
+            </li>
+            <li class="slideitem">
+                <div>
+                    <label for="slide02" class="left"></label>
+                    <label for="slide04" class="right"></label>
+                    <a><img src="/Project1/assets/img/3.jpg"></a>
+                </div>
+            </li>
+            <li class="slideitem">
+                <div>
+                    <label for="slide03" class="left"></label>
+                    <label for="slide01" class="right"></label>
+                    <a><img src="/Project1/assets/img/4.jpg"></a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <br><br><br><br>
+
+    <footer class="footer text-faded text-center py-5">
+        <div class="container">
+            <p class="m-0 small">for you &copy; Your Website 2021.8.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
