@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Index</title>
+</head>
+<body>
+
+<a th:href="@{/login/google}">Google Login</a> <br>
+<a th:href="@{/login/naver}">Naver Login</a> <br>
+<a th:href="@{/login/facebook}">Facebook Login</a> <br>
+<a th:href="@{/login/kakao}">Kakao Login</a> <br>
+<a th:href="@{/login}"> 통합 Login</a> <br>
+<a th:href="@{/user}"> 로그인한 유저만 사용 가능</a> <br>
+
+<div th:if="${session.user != null}">
+[[${session.user.email}]],[[${session.user.name}]] <a th:href="@{/logout}"> logout</a>
+</div>
+
+</body>
+</html>

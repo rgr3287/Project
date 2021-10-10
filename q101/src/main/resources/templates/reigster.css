@@ -1,0 +1,183 @@
+@charset "EUC-KR";
+
+*{
+    font-family: "Noto Sans KR", sans-serif;
+}
+body{
+    background-image:url(https://source.unsplash.com/collection/190727/1600x900);;
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+
+
+}
+.main{
+    border: 1px solid gray;
+    background: rgba(0, 0, 0, 0.1);
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    
+    border-radius: 20px;
+    width:40%;
+    /* 700px */
+    
+    margin:auto;
+    margin-top: 10%;
+    /* 200px 1px 10px 500px  */
+    
+}
+h1{
+    text-align: center;
+    color: rgb(151, 104, 65);
+}
+
+.id{
+    margin-top: 20px;
+    width: 100%;
+}
+.id input{
+    display:block;
+    width: 60%;
+    height: 30px;
+    border-radius: 30px;
+    margin:auto;
+    /* 1px 30px 10px 40px */
+    padding: 10px 20px 10px 20px;
+    
+    /*  5px 20px */
+    border: 1px solid lightgray;
+    outline: none;
+}
+.hash{
+	margin-top: 20px;
+    width: 100%;
+}
+.mail{
+    margin-top: 20px;
+    width: 100%;
+
+}
+#email1 {
+    
+    width: 17%;
+    height: 30px;
+    border-radius: 30px;
+    margin-left: 20%;
+    padding: 10px 20px 10px 20px;
+    
+    
+   
+    border: 1px solid lightgray;
+    outline: none;
+}
+#email2 {
+    display: inline-block;
+    width: 20%;
+    height: 30px;
+    border-radius: 30px;
+    /* margin:auto; */
+    padding: 10px 20px 10px 20px;
+    
+    
+   
+    border: 1px solid lightgray;
+    outline: none;
+}
+#email_select{
+    border-color: lightgray;
+    border-radius: 30px;
+    height: 30px;
+    
+}
+.mail2 {
+    margin-top: 20px;
+    width: 100%;
+}
+.mail2 input {
+    display:block;
+    width: 60%;
+    height: 30px;
+    border-radius: 30px;
+    margin:auto;
+    
+    
+    padding: 10px 20px 10px 20px;
+   
+    border: 1px solid lightgray;
+    outline: none;
+}
+
+.pwd {
+    margin-top: 20px;
+    width: 100%;
+}
+.pwd input {
+    display:block;
+    width: 60%;
+    height: 30px;
+    border-radius: 30px;
+    margin:auto;
+    
+    
+    padding: 10px 20px 10px 20px;
+   
+    border: 1px solid lightgray;
+    outline: none;
+}
+
+    .pwdCheck {
+        margin-top: 20px;
+        width: 100%;
+    }
+    .pwdCheck input {
+        display:block;
+        width: 60%;
+        height: 30px;
+        border-radius: 30px;
+        margin:auto;
+        
+        
+        padding: 10px 20px 10px 20px;
+       
+        border: 1px solid lightgray;
+        outline: none;
+    }
+    
+
+.date{
+    margin-top: 20px;
+    width: 100%;
+}
+.date input{
+    display:block;
+    width: 60%;
+    height: 30px;
+    border-radius: 30px;
+    margin:auto;
+    /* 1px 30px 10px 40px */
+    padding: 10px 20px 10px 20px;
+    /*  5px 20px */
+    border: 1px solid lightgray;
+    outline: none;
+}
+
+.submit {
+    margin-top: 50px;
+    width: 80%;
+    align : center;
+  }
+  .submit input {
+    width: 100%;
+    height: 50px;
+    border: 0;
+    outline: none;
+    border-radius: 40px;
+    background: linear-gradient(to left,rgba(180, 130, 72, 0.829), rgb(255, 155, 47));
+    color: white;
+    font-size: 1.2em;
+    letter-spacing: 2px;
+  }
